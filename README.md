@@ -1,42 +1,13 @@
-# **Desafio do Estacionamento de Carros**
+# **Detalhe da solução**
 
-# Motivação
-Avaliar o desempenho de desenvolvedores ao utilizar o framework ASP.NET Core para implementar uma API RESTful documentada e testada.
+# **Api e Front**
 
-# Introdução 
-Você foi procurado para implementar uma API que gerencie um estaciomento privado de veículos. 
+Primeiramente, tive que analisar como iria funcionar o backend para a construção de uma api simples. Dessa forma, pensei em um modelo relacional onde cada vaga, poderia ter um carro e cada carro um recibo, com um relátorio.
 
-O cliente precisa que o sistema seja feito em ASP.NET Core já que ele é produtivo, eficiente e multi-plataforma.
+Dessa forma, a primeira ação depois da construção da API foi a criação da tela Home que mostrava a quantidade de vagas disponíveis, ocupadas e totais, tendo em vista se dentro de sua array, teria objeto.
 
-# Descrição do sistema
-Criar uma API para gerenciamento de carros em um estacionamento, que deve ter pelo menos 15 vagas. 
-Através dos métodos da API será possível ver quantas vagas estão disponíveis, estacionar um carro, realizar o pagamento do ticket e emitir um relatório de recebimentos.
-|Permanência|Valor (R$)|
-|-----------|---------:|
-|Até 3 horas|7,00      |
-|Hora extra |3,00      |
+Em seguida, partir para a construção do front da tela de cadastro, o qual deveria se realizada no url especifico de cada vaga. Dessa forma, tive que descrever uma função para pegar todas as vagas livres e me retornar a apenas uma para a inserção do novo veículo que será adicionado.
 
-Métodos a serem criados:
-- Consultar quantidade de vagas disponíveis
-- Listar posição das vagas disponíveis
-- Estacionar um carro numa vaga
-- Pagar ticket
-- Relatório com ocupação atual do estacionamento
-- Relatório com valor arrecadado por período
+Na tela de pagamento, o qual lista todos os carros e suas respectivas placas, tive que descrever uma funcao para pegar todos os carros das vagas ocupadas. Dessa lista, coloquei a função map para o front fazer uma lista com parametros de cada carro listado. Dessa forma, ao clicar, conseguiria ter as informações especificas daquele carro e poderia passar para um metodo e pagamento e um breve relatorio de sua atividade.
 
-**Caso algum aspecto do problema não tenha sido detalhado, solucione da forma que achar melhor, e justifique sua decisão.**
-
-# Tecnologias requeridas
-- ASP.NET Core (C#) rodando em Windows ou Linux
-- Banco de dados à sua escolha (relacional ou não)
-- Testes unitários em todos os métodos da API
-- Documentação dos métodos com Swagger/OpenAPI
-- *(extra)* CI/CD
-- *(extra)* Monitoramento da API
-- *(extra)* FrontEnd em um framework à sua escolha
-
-# Como entregar o desafio?
-Faça um fork desse repositório e mande o link de clonagem para anderson@vsoft.com.br.
-Troque o item final (*Como entregar o desafio?*) por *Detalhe da solução*, onde você explicará as decisões de arquitetura que tomou e como executar seu projeto.
-Depois você será convocado para apresentar sua solução presencialmente.
-
+Ao clicar no carro que ira fazer o pagamento, ele reconhece que o pagamento no inicio dessa função como falso, e ao sucesso do metodo de pagamento, ele declara como true o pagamento e exclui automaticamente o carro do banco de dados.
