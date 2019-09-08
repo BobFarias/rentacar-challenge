@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-index-left-home{
+  padding-top: 20%;
+  padding-bottom: 20%;
+  display: grid;
+}
+
+.col-index-left-cadastro{
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+
+.col-index-left label{
+  margin-bottom: 20px;
+}
+
+.col-index-right{
+  background-size: cover;
+  background-image: url("https://nikana.gr/images/3338/parking-in-kavala.jpg");
+}
+
+.button-vsoft{
+    padding-bottom: 10px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.button-vsoft:hover{
+  background-color: #fa2537;
+  border-color: #fa2537;
+}
+
+.carros{
+  margin-bottom: 10px;
+}
+
+.menu{
+  margin-right: 20px;
+}
+
+.carros p{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+
+
