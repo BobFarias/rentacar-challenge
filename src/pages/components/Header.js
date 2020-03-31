@@ -54,7 +54,7 @@ export default function Header() {
                 <Link to="/pagamento"><MenuItem onClick={handleClose}>Pagamento</MenuItem></Link>
               </Menu>
           <Typography variant="h6" className={classes.title}>
-            Rent a car Service
+            Parking Service
           </Typography>
         </Toolbar>
       </AppBar>
